@@ -11,6 +11,7 @@
       <a *ngIf="!(isAuth$ | async)" mat-list-item routerLink="/signup">Signup</a>
       <a *ngIf="!(isAuth$ | async)" mat-list-item routerLink="/login">Login</a>
       <a *ngIf="isAuth$ | async" mat-list-item routerLink="/training">Training</a>
+      <a *ngIf="isAuth$ | async" mat-list-item routerLink="/videos">Videos</a>
       <a *ngIf="isAuth$ | async" mat-list-item (click)="onLogout()">Logout</a>
     </mat-nav-list>
   </mat-toolbar-row>
