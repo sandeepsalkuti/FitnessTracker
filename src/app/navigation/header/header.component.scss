@@ -1,0 +1,16 @@
+mat-toolbar {
+  .mat-nav-list {
+    padding-top: 0;
+  }
+  a {
+    color: white;
+  }
+}
+
+.logo {
+  height: 49px;
+  outline: none;
+  &:hover {
+    cursor: pointer;
+  }
+}
