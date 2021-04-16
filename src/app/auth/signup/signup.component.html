@@ -16,7 +16,7 @@
     </mat-form-field>
 
     <mat-form-field>
-      <input matInput placeholder="Your birthdate" [matDatepicker]="picker" [max]="maxDate" ngModel name="birthdate" required>
+      <input matInput placeholder="Your birthdate" [matDatepicker]="picker" [max]="maxDate" ngModel name="birthdate" #birthdateInput="ngModel" required>
       <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
       <mat-datepicker #picker></mat-datepicker>
     </mat-form-field>
@@ -24,7 +24,7 @@
     <mat-form-field class="example-full-width">
       <mat-label>Your Telephone</mat-label>
       <span matPrefix>+1 &nbsp;</span>
-      <input type="tel" matInput placeholder="555-555-1234" ngModel name="tel">
+      <input type="tel" matInput placeholder="555-555-1234" ngModel name="tel" #telInput="ngModel">
       <mat-icon matSuffix>mode_edit</mat-icon>
     </mat-form-field>
 

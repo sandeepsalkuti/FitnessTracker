@@ -8,7 +8,7 @@ import { MatCarousel, MatCarouselComponent } from '@ngmodule/material-carousel';
 })
 export class WelcomeComponent implements OnInit {
 
-  slides = [{'image': './assets/welcome11.jpg'}, {'image': 'https://content.active.com/Assets/Active.com+Content+Site+Digital+Assets/Fitness/Galleries/30+Motivational/Your-Body.jpg'},{'image': 'https://fiverr-res.cloudinary.com/images/q_auto,f_auto/gigs/62812139/original/8e74cd6fac88017d77dfb97f2729ea9196165ac3/give-50-motivational-fitness-quotes-pictures.jpg'}, {'image': 'http://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-46-1920-x-1080.jpg'}, {'image': 'http://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-19-1920-x-1080.jpg'}];
+  slides = [{'image': 'https://cdn.wallpapersafari.com/96/45/MKoFqY.gif'}, {'image': 'https://wallpaperaccess.com/full/1108003.jpg'},{'image': 'https://cdn.wallpapersafari.com/30/61/x7Fz0I.jpg'}, {'image': 'http://trumpwallpapers.com/wp-content/uploads/Workout-Wallpaper-46-1920-x-1080.jpg'}, {'image': './assets/y.jpg'}];
 
   constructor() { }
 

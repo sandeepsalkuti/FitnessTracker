@@ -1,4 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
+import {NgxSpinnerModule} from 'ngx-spinner';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
@@ -36,6 +38,8 @@ import { YoutubevideosComponent } from './youtubevideos/youtubevideos.component'
     FlexLayoutModule,
     AngularFireModule.initializeApp(environment.firebase),
     AuthModule,
+    HttpClientModule,
+    NgxSpinnerModule,
     AngularFirestoreModule,
     StoreModule.forRoot(reducers),
     MatCarouselModule.forRoot()

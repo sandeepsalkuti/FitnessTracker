@@ -14,6 +14,12 @@
     <mat-icon>fitness_center</mat-icon>
     <span class="nav-caption">Training</span>
   </a>
+
+  <a mat-list-item routerLink="/videos" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">Videos</span>
+  </a>
+
   <mat-list-item>
     <button mat-icon-button (click)="onLogout()" *ngIf="isAuth$ | async">
       <mat-icon>eject</mat-icon>

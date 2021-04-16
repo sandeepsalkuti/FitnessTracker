@@ -8,7 +8,9 @@ mat-toolbar {
 }
 
 .logo {
-  height: 49px;
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
   outline: none;
   &:hover {
     cursor: pointer;
