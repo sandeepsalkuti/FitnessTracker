@@ -20,6 +20,21 @@
     <span class="nav-caption">Videos</span>
   </a>
 
+  <a mat-list-item routerLink="/workout" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">Workouts</span>
+  </a>
+
+  <a mat-list-item routerLink="/search" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">SearchChannels</span>
+  </a>
+
+  <a mat-list-item routerLink="/contact" (click)="onClose()" *ngIf="isAuth$ | async">
+    <mat-icon>switch_video</mat-icon>
+    <span class="nav-caption">ContactUs</span>
+  </a>
+
   <mat-list-item>
     <button mat-icon-button (click)="onLogout()" *ngIf="isAuth$ | async">
       <mat-icon>eject</mat-icon>

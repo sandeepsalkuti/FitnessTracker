@@ -1,0 +1,28 @@
+.example-card {
+  margin-bottom: 10px;
+  height: 400px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 0px;
+  cursor: pointer;
+}
+.card-img-top {
+  width: 150px;
+  height: 150px;
+}
+
+.mat-raised-button {
+  margin-left: 10px;
+}
+.mat-form-field {
+  margin-left: 30px;
+}
+.card-deck-container {
+  width: 100%;
+  max-width: 1200px;
+  position: relative;
+  border-radius: 2px;
+  padding: 10px 10px 30px;
+  margin: 10px 10px 10px 10px;
+}

@@ -1,0 +1,38 @@
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+<div>
+
+  <mat-form-field appearance="legacy">
+    <mat-label>Channel Name</mat-label>
+    <input matInput #channelName type="text" placeholder="youtube channel..." required>
+  </mat-form-field>
+  <button mat-raised-button color="primary" (click)="getData()">Get Channel</button>
+
+  </div>
+
+  <!-- <div class="row">
+    <div *ngFor="let channel of channels" class="col-xl-3 col-md-6 mb-4">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>{{channel.snippet.channelTitle}}</mat-card-title>
+    </mat-card-header>
+    <a target="_blank" href="https://www.youtube.com/channel/{{channel.id.channelId}}">
+      <img  mat-card-image  src="{{channel.snippet.thumbnails.medium.url}}"/>
+    </a>
+    </mat-card>
+    </div>
+    </div> -->
+
+    <div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"class="card-deck-container" fxLayoutGap="28px">
+      <div fxFlex *ngFor="let channel of channels"  class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+      <div class="card border-0 shadow vh-10">
+        <a href="https://www.youtube.com/channel/{{channel.id.channelId}}" target="_blank">
+          <img [src]="channel.snippet.thumbnails.medium.url" class="card-img-top" alt="..."></a>
+        <div class="card-body text-center">
+          <h5 class="card-title mb-0">
+            <a href="https://www.youtube.com/channel/{{channel.id.channelId}}">{{channel.snippet.channelTitle.slice(0, 30)}}
+            </a></h5>
+          <div class="card-text text-black-50">{{channel.snippet.description.slice(0, 100)}}</div>
+         </div>
+      </div>
+    </div>
+</div>

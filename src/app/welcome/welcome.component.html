@@ -1,5 +1,4 @@
 
-
   <mat-carousel
   timings="250ms ease-in"
   [autoplay]="true"
@@ -22,6 +21,9 @@
     [hideOverlay]="false"
   ></mat-carousel-slide>
 </mat-carousel>
+<div>
+
+</div>
 
 <div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" fxLayoutAlign="center center">
   <section>
@@ -36,4 +38,11 @@
     <img src="./assets/welcome3.jpeg">
     <p>It’s going to be a journey. It’s not a sprint to get in shape!</p>
   </section>
+</div>
+
+
+<div *ngIf="authService.userData as user" >
+   <h3 style="font-size: large;">{{user.name}}</h3>
+
+  <h2>Hai</h2>
 </div>

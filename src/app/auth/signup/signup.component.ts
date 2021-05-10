@@ -15,6 +15,7 @@ import * as fromRoot from '../../app.reducer';
 export class SignupComponent implements OnInit {
   maxDate;
   isLoading$: Observable<boolean>;
+  userData: {}
 
   constructor(
     private authService: AuthService,
@@ -36,5 +37,25 @@ export class SignupComponent implements OnInit {
       email: form.value.email,
       password: form.value.password
     });
+    this.userData = {
+      name: form.value.name,
+      birthdate: form.value.birthdate,
+      tel: form.value.tel,
+      email: form.value.email,
+      }
+      this.addUser(this.userData);
+    // localStorage.setItem('userData',JSON.stringify(this.userData));
+    // JSON.parse(localStorage.getItem('userData'));
+  }
+  addUser(user){
+    let users=[];
+    if(localStorage.getItem('userData')){
+      users = JSON.parse(localStorage.getItem('userData'));
+      users = [user,...users];
+    }
+    else{
+      users=[user];
+    }
+    localStorage.setItem('userData',JSON.stringify(users));
   }
 }

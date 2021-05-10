@@ -9,8 +9,10 @@ import * as fromRoot from '../app.reducer';
 import * as UI from '../shared/ui.actions';
 import * as Auth from './auth.actions';
 
+
 @Injectable()
 export class AuthService {
+  userData: any;
 
   constructor(
     private router: Router,
@@ -34,6 +36,7 @@ export class AuthService {
   registerUser(authData: AuthData) {
     // this.uiService.loadingStateChanged.next(true);
     this.store.dispatch(new UI.StartLoading());
+    this.userData = authData;
     this.angularFireAuth.auth
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
@@ -68,6 +71,7 @@ export class AuthService {
   logout() {
     this.trainingService.cancelSubscriptions();
     this.angularFireAuth.auth.signOut();
+    // localStorage.removeItem('userData');
     this.router.navigate(['/login']);
   }
 }

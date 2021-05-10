@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { MatVideoModule } from 'mat-video';
 import {
   MatButtonModule,
   MatIconModule,
@@ -41,7 +42,9 @@ import {
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatVideoModule
+
   ],
   exports: [
     MatButtonModule,
@@ -62,7 +65,8 @@ import {
     MatTableModule,
     MatSortModule,
     MatPaginatorModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatVideoModule
   ]
 })
 export class MaterialModule {}
