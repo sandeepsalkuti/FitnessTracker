@@ -34,35 +34,29 @@ export class AuthService {
   }
 
   registerUser(authData: AuthData) {
-    // this.uiService.loadingStateChanged.next(true);
     this.store.dispatch(new UI.StartLoading());
     this.userData = authData;
     this.angularFireAuth.auth
       .createUserWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
-        // this.uiService.loadingStateChanged.next(false);
         this.store.dispatch(new UI.StopLoading());
         this.router.navigate(['/']);
       })
       .catch(error => {
-        // this.uiService.loadingStateChanged.next(false);
         this.store.dispatch(new UI.StopLoading());
         this.uiService.showSnackbar(error.message, null, 3000);
       });
   }
 
   login(authData: AuthData) {
-    // this.uiService.loadingStateChanged.next(true);
     this.store.dispatch(new UI.StartLoading());
     this.angularFireAuth.auth
       .signInWithEmailAndPassword(authData.email, authData.password)
       .then(result => {
-        // this.uiService.loadingStateChanged.next(false);
         this.store.dispatch(new UI.StopLoading());
         this.router.navigate(['/']);
       })
       .catch(error => {
-        // this.uiService.loadingStateChanged.next(false);
         this.store.dispatch(new UI.StopLoading());
         this.uiService.showSnackbar(error.message, null, 3000);
       });
@@ -71,7 +65,6 @@ export class AuthService {
   logout() {
     this.trainingService.cancelSubscriptions();
     this.angularFireAuth.auth.signOut();
-    // localStorage.removeItem('userData');
     this.router.navigate(['/login']);
   }
 }

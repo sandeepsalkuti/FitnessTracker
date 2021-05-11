@@ -25,7 +25,52 @@
 
 </div>
 
-<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" fxLayoutAlign="center center">
+
+
+
+<div id="about" class="container-fluid">
+  <div class="row">
+    <div class="col-sm-8">
+      <h2 class="abouttext">About FITNESS TRACKER</h2><br>
+      <h4>To help you to build a stronger / leaner body, the aim of the fitness app is to make your lifestyle healthier by tracking your food intake, water intake, and workout pattern. Additionally, some apps even keep a track of your heart rate and blood pressure, which is beneficial for individuals with high blood pressure.</h4><br>
+      <p>The fitness app is a very good workout app, exercise planner, and fitness tracker. It features a customizable workout schedule that works for most daily routines, there are a variety of exercises, stretches, and other activities. You can do anything as simple as a five minute stretch in your office or a full-blown workout session at home on your day off.
+        Easy to Use Workout Trainer, Workout Timer, Exercise Database, Workout planner with pre-built routines.The app is very easy to use as it possesses very simple functionality navigation and can be managed by any general person.You change its appearance or features to suit your tastes or needs.The fitness app is a very good workout app, exercise planner, and fitness tracker. It features a customizable workout schedule that works for most daily routines, there are a variety of exercises, stretches, and other activities.
+        You can keep a count of steps and track the distance you have walked. Such fitness apps help you meet your step count target by giving you all the information you need. Tracking your steps can improve your daily step count and work more towards achieving your target.Now you can simply monitor all your workout and health progress at just one click. Fitness apps enable you to fill in all your health details and updates. This helps you to track your health details at just one go. You can even compare your current blood parameters with your previous ones, which will give you an idea if your health has improved or not.
+      </p>
+    </div>
+    <div class="col-sm-4">
+      <br><br><img src="https://www.healthandfitnesstravel.com/images/blog/2011-2017/Health-and-Fitness-Class-Guide.jpg" class="img-rounded" alt="Cinque Terre" width="350" height="200"><br>
+      <br>
+      <br><img src="https://www.snapfitness.com/assets/HeaderBackgroundImages/e7e7b89bab/Gym-Workout-Routines.jpg" class="img-rounded" alt="Cinque Terre" width="350" height="250"><br>
+    </div>
+  </div>
+</div>
+
+<mat-toolbar class="secondary" color="secondary">
+  <span>App Features</span>
+</mat-toolbar>
+
+
+<div fxLayout="row wrap" fxLayout.xs="column" fxLayoutAlign="space-around center"class="card-deck-container" fxLayoutGap="28px">
+  <!-- <div class="col-xl-3 col-md-1 mb-4"> -->
+  <mat-card appMaterialElevation fxFlex *ngFor="let workout of features"  class="example-card" fxFlex="calc(33%-25px)" fxFlex.sm="calc(50%-25px)" >
+    <mat-card-header>
+      <mat-card-title>{{workout.title}}</mat-card-title>
+    </mat-card-header>
+    <img mat-card-image [src]="workout.image" alt="Photo of a Shiba Inu">
+    <mat-card-content>
+      <p>{{workout.content}}
+      </p>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="accent">LIKE</button>
+      <button mat-raised-button color="primary">SHARE</button>
+    </mat-card-actions>
+      <!-- <a mat-raised-button target="_blank" href="https://darebee.com/">More</a> -->
+    </mat-card>
+</div>
+
+<div class="welcome" fxLayout="column" fxLayout.gt-md="row" fxLayoutGap.gt-md="20px" >
   <section>
     <img src="./assets/welcome1.jpeg">
     <p>You’re only one workout away from a good mood!</p>
@@ -41,8 +86,61 @@
 </div>
 
 
-<div *ngIf="authService.userData as user" >
-   <h3 style="font-size: large;">{{user.name}}</h3>
 
-  <h2>Hai</h2>
+<div class="footer">
+  <div class="footer-content">
+    <div class="footer-section about">
+      <h1 class="logo-text"><span>Fitness</span>Tracker</h1>
+      <p>
+         Fitness Tracker app solution helps you stay fit and get the most out of your gym workouts.
+        Featuring data-driven training & easy workout logging mechanism.we can provide you with leading fitness app solutions in gym training apps.
+      </p>
+      <div class="contact">
+        <span><i class="fas fa-phone"></i>&nbsp; 123-456-789</span>
+        <span><i class="fas fa-envelope"></i>&nbsp; info@fitnessapp.com</span>
+      </div>
+      <div class="socials">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-youtube"></i></a>
+      </div>
+    </div>
+    <div class="footer-section links">
+      <h2>Quick Links</h2>
+      <br>
+      <ul>
+        <a routerLink="/training"><li>Training</li></a>
+        <a routerLink="/videos"><li>Videos</li></a>
+        <a routerLink="/workout"><li>Workouts</li></a>
+        <a routerLink="/search"><li>SearchChannels</li></a>
+        <a routerLink="/contact"><li>ContactUs</li></a>
+
+      </ul>
+
+    </div>
+    <div class="footer-section contact-form">
+      <h2>Contact Us</h2>
+      <br>
+      <form action = "index.html" method="post">
+        <input type="email" name="email" class="text-input contact-input" placeholder="your email address">
+        <br>
+        <textarea name="message" class="text-input contact-input" placeholder="Your message"></textarea>
+        <br>
+        <button type="submit" class="btn btn-big contact-btn">
+          <i class="fas fa-envelope"></i>
+          Send
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+  <div class="footer-bottom">
+    &copy; Team-7 | Designed by SandeepSumanthHarikaNavya
+  </div>
 </div>
+
+
+

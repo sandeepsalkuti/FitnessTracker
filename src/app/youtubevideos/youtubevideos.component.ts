@@ -42,25 +42,6 @@ export class YoutubevideosComponent implements OnInit {
       });
   }
 
-  // ngOnInit() {
-  //   this.spinner.show()
-  //   setTimeout(()=>
-  //   {
-  //     this.spinner.hide()
-  //   },3000)
-  // }
-  // getVideo(){
-  //   let video=''
-  //   const videoName = this.videoName.nativeElement.value
-  //   this.youTubeService.getVideos(videoName,12).subscribe((data) =>{
-  //     data.items.forEach(item=>{
-  //       video = `<iframe width="420" height="315" src="http://www.youtube.com/embed/${item.id.videoId}" frameborder="0" allowfullscreen></iframe>`
-
-  //       this.videos.push(video);
-  //     })
-  //   })
-  // }
-
   }
 
 
